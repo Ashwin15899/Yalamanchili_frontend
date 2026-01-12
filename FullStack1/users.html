@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Users</title>
+    <link rel="stylesheet" href="./users.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li><a href="./form.html">Form</a></li>
+                <li><a href="./users.html">Users</a></li>
+            </ul>
+        </nav>
+        <main class="users-container">
+
+            <div class="search-bar-content">
+                <input type="search" id="search-bar" class="search-bar">
+            </div>
+
+            <!-- Get all users -->
+            <div class="users-table">
+                <table>
+                    <thead class="table-head">
+                        <tr class="headings">
+                            <th>Sl.no</th>
+                            <th>Employee Id</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Get user by Id -->
+            <div class="view-modal" id="view-modal">
+                <div class="view-user-header">
+                    <p class="view-user-title"><span id="username"></span>'s Details</p>
+                    <p class="view-close" id="view-close">X</p>
+                </div>
+                <table class="user-table" id="user-table">
+
+                </table>
+            </div>
+
+            <!-- Update user -->
+            <div class="update-modal" id="update-modal">
+                <p class="update-user-title">Update user</p>
+                <form class="update-form" id="update-form">
+                    <table>
+                        <tr>
+                            <td><label class="label" for="uname">Username</label></td>
+                            <td><input type="text" id="uname"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="label" for="email">Email</label></td>
+                            <td><input type="email" id="email"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="label" for="password">Password</label></td>
+                            <td><input type="password" id="password"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="label" for="contactNo">Contact No</label></td>
+                            <td><input type="number" id="contactNo"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="label" for="address">Address</label></td>
+                            <td><textarea id="address"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label class="label" for="role">Role</label></td>
+                            <td>
+                                <select name="role" id="role" class="role">
+                                    <option value="Select">Select</option>
+                                    <option value="Java Developer">Java Developer</option>
+                                    <option value="React Developer">React Developer</option>
+                                    <option value="Project Manager">Project Manager</option>
+                                    <option value="HR Manager">HR Manager</option>
+                                    <option value="Software Testing">Software Testing</option>
+                                    <option value="UI/UX Designer">UI/UX Designer</option>
+                                    <option value="Devops Engineer">Devops Engineer</option>
+                                    <option value="Digital Marketting">Digital Marketting</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="label" for="gender">Gender</label></td>
+                            <td>
+                                <input type="radio" value="male" id="male" name="gender">
+                                <label for="male">Male</label>
+                                <input type="radio" value="female" id="female" name="gender">
+                                <label for="female">Female</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="label" for="dob">Date of birth</label></td>
+                            <td><input type="date" name="dob" id="dob"></td>
+                        </tr>
+                    </table>
+                    <div class="btns">
+                        <button type="button" id="cancel-update">Cancel</button>
+                        <button type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Delete user -->
+            <div class="delete-modal" id="delete-modal">
+                <p class="delete-user-title">Delete user</p>
+                <p class="delete-confirmation">Are you sure you want to delete user <span id="delete-uname"></span>?</p>
+                <div class="btns">
+                    <button type="button" id="cancel-delete">Cancel</button>
+                    <button type="click" id="delete-user-btn">Delete</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="background-overlay" id="background-overlay"></div>
+
+    <p class="notification" id="notification">
+        <span class="tick">&#9989;</span>
+    </p>
+
+    <script src="./users.js"></script>
+</body>
+
+</html>

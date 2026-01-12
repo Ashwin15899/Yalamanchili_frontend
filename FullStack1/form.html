@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Users</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+<body>
+    <div class="main-container">
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li><a href="./form.html">Form</a></li>
+                <li><a href="./users.html">Users</a></li>
+            </ul>
+        </nav>
+        <div class="form-container">
+            <div class="form-content">
+                <form class="main-form" id="main-form">
+                    <h2>User registration</h2>
+                    <table class="main-table">
+                        <tr>
+                            <td>
+                                <label for="username">User name</label>
+                            </td>
+                            <td>
+                                <input id="username" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Email</label>
+                            </td>
+                            <td>
+                                <input id="email" type="email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">Password</label>
+                            </td>
+                            <td>
+                                <div class="pwd-cell">
+                                    <input id="password" type="password">
+                                    <button type="button" id="show-pass" class="show-pass">&#128065;</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="contact">Contact no</label>
+                            </td>
+                            <td>
+                                <input id="contact" type="number">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="address">Address</label>
+                            </td>
+                            <td>
+                                <textarea id="address" rows="4">
+                                </textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="role">Role</label>
+                            </td>
+                            <td>
+                                <select name="role" id="role" class="role">
+                                    <option value="Select">Select</option>
+                                    <option value="Java Developer">Java Developer</option>
+                                    <option value="React Developer">React Developer</option>
+                                    <option value="Project Manager">Project Manager</option>
+                                    <option value="HR Manager">HR Manager</option>
+                                    <option value="Software Testing">Software Testing</option>
+                                    <option value="UI/UX Designer">UI/UX Designer</option>
+                                    <option value="Devops Engineer">Devops Engineer</option>
+                                    <option value="Digital Marketting">Digital Marketting</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="gender">Gender</label>
+                            </td>
+                            <td>
+                                <input type="radio" value="male" id="male" name="gender">
+                                <label for="male">Male</label>
+                                <input type="radio" value="female" id="female" name="gender">
+                                <label for="female">Female</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dob">Date of birth</label>
+                            </td>
+                            <td>
+                                <input type="date" name="dob" id="dob">
+                            </td>
+                        </tr>
+                        <tr class="checkbox">
+                            <td colspan="2" class="checkbox-cell"> 
+                                <input type="checkbox" id="acknowledge" class="acknowledge">
+                                <label for="acknowledge">I hereby agree with the terms and conditions of the company</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="submit-btn">
+                        <button type="submit" id="submit">Submit form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="background-overlay" id="background-overlay"></div>
+
+        <p class="notification" id="notification">
+            <span class="tick">&#9989;</span>
+        </p>
+    </div>
+
+
+    <script src="./form.js"></script>
+</body>
+</html>
