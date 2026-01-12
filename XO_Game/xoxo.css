@@ -1,0 +1,17 @@
+body {
+    padding: 25px;
+}
+
+.title {
+    color: #5C6AC4;
+}
+
+#xo, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 40px;
+}
+
+.result{
+    display: none;
+}
