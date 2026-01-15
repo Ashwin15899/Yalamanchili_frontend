@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User page</title>
+    <link rel="stylesheet" href="./CSS/user.css">
+</head>
+
+<body class="main">
+    <header class="header">
+        <p class="title">Welcome</p>
+        <div class="right-side">
+            <ul class="menu">
+                <li id="home-page-btn">Home</li>
+                <li id="txn-page-btn">Transactions</li>
+            </ul>
+            <img src="./Images/profile.jpg" alt="profile" class="profile-img">
+        </div>
+    </header>
+    <main class="home-page" id="home-page">
+        <div class="details" id="details">
+            <table class="detail-card">
+                <tr class="detail">
+                    <td class="detailName">Account number</td>
+                    <td class="detailValue" id="accNo"></td>
+                </tr>
+                <tr class="detail">
+                    <td class="detailName">Holder name</td>
+                    <td class="detailValue" id="accHolder"></td>
+                </tr>
+                <tr class="detail">
+                    <td class="detailName">Account type</td>
+                    <td class="detailValue" id="accType"></td>
+                </tr>
+                <tr class="detail">
+                    <td class="detailName">Balance</td>
+                    <td class="detailValue" id="balance"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="options-container">
+            <div class="options-input">
+                <p class="opt-title">Choose your transaction</p>
+                <div class="options">
+                    <input type="radio" name="option" id="deposit" value="Deposit">
+                    <label for="deposit" class="label">Deposit</label>
+                    <input type="radio" name="option" id="withdraw" value="Withdraw">
+                    <label for="withdraw" class="label">Withdraw</label>
+                    <input type="radio" name="option" id="transfer" value="Transfer">
+                    <label for="transfer" class="label">Transfer</label>
+                </div>
+            </div>
+            <form class="form" id="form">
+                <div class="user-form" id="deposit-form">
+                    <p class="ip-title">Enter amount to deposit</p>
+                    <input type="number" id="user-ip-deposit" class="user-ip">
+                </div>
+                <div class="user-form" id="withdraw-form">
+                    <p class="ip-title">Enter amount to withdraw</p>
+                    <input type="number" id="user-ip-withdraw" class="user-ip">
+                </div>
+                <div class="user-form" id="transfer-form">
+                    <p class="ip-title">Enter Account number to transfer</p>
+                    <input type="text" id="user-ip-accNo" class="user-ip">
+                    <p class="ip-title">Enter amount to transfer</p>
+                    <input type="number" id="user-ip-transfer" class="user-ip">
+                </div>
+                <button type="submit" class="submit-form">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <main class="transaction-page" id="txn-page">
+        <div class="transaction-history">
+            <p class="txn-title">Transaction History</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Transfer from/ to</th>
+                        <th>Old balance</th>
+                        <th>Amount</th>
+                        <th>New balance</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="history-body">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script type="module" src="./JavaScript/user.js"></script>
+</body>
+
+</html>
